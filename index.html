@@ -15,50 +15,35 @@
     <link href="https://cdn.bootcss.com/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            /* 主色保持偏浅、偏干净 */
             --primary-color: #3B82F6;
             --primary-light: #93C5FD;
             --primary-dark: #2563EB;
-
-            /* 用作边框彩色“流体” */
             --primary-gradient: linear-gradient(
                 120deg,
                 rgba(167, 139, 250, 0.85),
                 rgba(96, 165, 250, 0.85),
                 rgba(52, 211, 153, 0.75)
             );
-
             --accent-color: #10B981;
             --accent-light: #6EE7B7;
             --accent-dark: #059669;
-
-            /* 可读性：正文更深一点，次级更柔一点 */
             --text-dark: #0F172A;
             --text-gray: rgba(15, 23, 42, 0.72);
             --text-muted: rgba(15, 23, 42, 0.55);
             --text-light: #F9FAFB;
-
-            /* 奶油背景 */
             --background: #FFF7ED;
-
-            /* 玻璃卡片：关键是“半透明 + 模糊 + 高光 + 柔阴影” */
             --card-bg: rgba(255, 255, 255, 0.62);
             --card-hover: rgba(255, 255, 255, 0.72);
             --border-color: rgba(255, 255, 255, 0.55);
-
             --shadow-sm: 0 6px 14px rgba(15, 23, 42, 0.06);
             --shadow: 0 18px 45px rgba(15, 23, 42, 0.10);
             --shadow-md: 0 22px 70px rgba(15, 23, 42, 0.12);
             --shadow-lg: 0 30px 90px rgba(15, 23, 42, 0.14);
-
             --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-
-            /* 圆角稍大更像“玻璃” */
             --radius-sm: 0.6rem;
             --radius: 0.85rem;
             --radius-md: 1.1rem;
             --radius-lg: 1.35rem;
-
             --glass-blur: 22px;
             --glass-sat: 180%;
         }
@@ -76,8 +61,6 @@
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-
-            /* 奶油底 + 流体浅色光斑（不会脏、不会深） */
             background:
                 radial-gradient(900px 600px at 12% 18%, rgba(255, 210, 235, 0.55), transparent 60%),
                 radial-gradient(880px 620px at 88% 20%, rgba(204, 232, 255, 0.70), transparent 58%),
@@ -115,7 +98,6 @@
             opacity: 0.95;
         }
 
-        /* 奶油雾化层 */
         .wrapper::before {
             background:
                 radial-gradient(560px 420px at 18% 28%, rgba(255, 255, 255, 0.78), transparent 62%),
@@ -123,7 +105,6 @@
                 radial-gradient(760px 560px at 45% 85%, rgba(255, 255, 255, 0.66), transparent 68%);
         }
 
-        /* 彩色“液态”层（透明度压住，保证高级和可读） */
         .wrapper::after {
             background:
                 radial-gradient(640px 520px at 22% 35%, rgba(167, 139, 250, 0.22), transparent 66%),
